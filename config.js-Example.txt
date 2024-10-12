@@ -1,0 +1,17 @@
+Example config.js entry for this module
+
+There is only 1 field to edit - Example below shows how to add in multiple trips. 
+Module will display the soonest 4 trips, trips in the past will not be displayed.
+
+Example config.js should look like
+
+{
+    module: "MMM-HolidayCountdown",
+    position: "top_left",  // Or wherever you'd like it displayed
+    config: {
+        trips: [
+            { destination: "Tunisia", date: "2023-08-15" },
+            { destination: "Reighton Sands", date: "2022-11-01" }
+        ]
+    }
+},

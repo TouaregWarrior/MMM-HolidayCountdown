@@ -1,0 +1,32 @@
+.holiday-countdown {
+    font-family: 'Roboto Condensed', sans-serif;  /* Match font with other module */
+    font-weight: 300;  /* Adjust the weight to be consistent */
+    width: 100%;
+    text-align: left;  /* Ensure left alignment */
+}
+
+.holiday-countdown header {
+    font-size: 24px;
+    font-weight: normal;  
+    padding-bottom: 10px;
+    text-align: left;
+    text-transform: none;  /* Ensure the text remains in mixed case */
+}
+
+.holiday-countdown .trip {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 3px 0;
+    line-height: 1.2em;
+}
+
+.holiday-countdown .destination {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.holiday-countdown .days {
+    text-align: right;
+    white-space: nowrap;
+}
