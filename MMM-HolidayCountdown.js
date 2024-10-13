@@ -5,10 +5,17 @@ Module.register("MMM-HolidayCountdown", {
             { destination: "Reighton Sands", date: "2023-11-01" },
             // Add as many trips as you want here
         ],
+        updateInterval: 1000 * 60 * 30  // Update every 30 minutes (in milliseconds)
     },
 
     start: function () {
-        this.updateDom();  // Updates the DOM right after loading
+        this.updateDom();  // Initial DOM update on load
+
+        // Schedule an update interval to recalculate the days and re-render
+        var self = this;
+        setInterval(function() {
+            self.updateDom();  // Re-render the module
+        }, this.config.updateInterval);
     },
 
     getDom: function () {
@@ -19,11 +26,14 @@ Module.register("MMM-HolidayCountdown", {
         header.innerHTML = "Holiday Countdown";
         wrapper.appendChild(header);
 
+        // Get the current date and zero out the time portion
         var today = new Date();
+        today.setHours(0, 0, 0, 0);  // Set hours, minutes, seconds, and milliseconds to 0
 
         // Filter trips to only include upcoming trips (date >= today)
         var upcomingTrips = this.config.trips.filter(trip => {
             var tripDate = new Date(trip.date);
+            tripDate.setHours(0, 0, 0, 0);  // Zero out time portion for the trip date
             return tripDate >= today;
         });
 
@@ -44,6 +54,8 @@ Module.register("MMM-HolidayCountdown", {
             destinationElement.innerHTML = trip.destination;
 
             var tripDate = new Date(trip.date);
+            tripDate.setHours(0, 0, 0, 0);  // Zero out time portion for the trip date
+
             var daysRemaining = Math.floor((tripDate - today) / (1000 * 60 * 60 * 24));
 
             var daysElement = document.createElement("div");
