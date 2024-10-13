@@ -5,7 +5,7 @@ Module.register("MMM-HolidayCountdown", {
             { destination: "Reighton Sands", date: "2023-11-01" },
             // Add as many trips as you want here
         ],
-        updateInterval: 1000 * 60 * 30  // Update every 30 minutes (in milliseconds)
+        updateInterval: 1000 * 60 * 15  // Update every 15 minutes (in milliseconds)
     },
 
     start: function () {
