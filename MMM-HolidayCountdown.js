@@ -1,3 +1,13 @@
+//MMM-HolidayCountdown.js:
+
+/* Magic Mirror
+ * Module: MMM-HolidayCountdown
+ *
+ * By TouaregWarrior
+ * MIT Licensed.
+ */
+
+
 Module.register("MMM-HolidayCountdown", {
     defaults: {
         trips: [
