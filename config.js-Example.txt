@@ -9,6 +9,7 @@ Example config.js should look like
     module: "MMM-HolidayCountdown",
     position: "top_left",  // Or wherever you'd like it displayed
     config: {
+        header: "Holiday Countdown",
         trips: [
             { destination: "Tunisia", date: "2023-08-15" },
             { destination: "Reighton Sands", date: "2022-11-01" }
