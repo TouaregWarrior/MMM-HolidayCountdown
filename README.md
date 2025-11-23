@@ -27,6 +27,7 @@ Example config.js entry should look like
 		module: "MMM-HolidayCountdown",
     		position: "top_right",  // Or wherever you'd like it displayed
     		config: {
+				header: "Holiday Countdown",
         		trips: [
 				{ destination: "Amsterdam", date: "2024-10-02" },
 				{ destination: "Reighton Sands", date: "2024-11-01" },
