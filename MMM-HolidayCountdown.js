@@ -33,8 +33,9 @@ Module.register("MMM-HolidayCountdown", {
         wrapper.className = "holiday-countdown";  // Ensure this class name is correct
 
         var header = document.createElement("header");
-        header.innerHTML = "Holiday Countdown";
-        wrapper.appendChild(header);
+		// Use header from config if set, otherwise fall back to default
+		header.innerHTML = this.config.header || this.defaults.header;
+		wrapper.appendChild(header);
 
         // Get the current date and zero out the time portion
         var today = new Date();
