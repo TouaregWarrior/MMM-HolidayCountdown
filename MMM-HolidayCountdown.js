@@ -10,6 +10,7 @@
 
 Module.register("MMM-HolidayCountdown", {
     defaults: {
+        include_today: false,
         trips: [
             { destination: "Tunisia", date: "2024-02-15" },
             { destination: "Reighton Sands", date: "2023-11-01" },
@@ -67,7 +68,7 @@ Module.register("MMM-HolidayCountdown", {
             var tripDate = new Date(trip.date);
             tripDate.setHours(0, 0, 0, 0);  // Zero out time portion for the trip date
 
-            var daysRemaining = Math.floor((tripDate - today) / (1000 * 60 * 60 * 24));
+            var daysRemaining = (Math.floor((tripDate - today) / (1000 * 60 * 60 * 24))) + Number(this.config.include_today);
 
             var daysElement = document.createElement("div");
             daysElement.className = "days";
