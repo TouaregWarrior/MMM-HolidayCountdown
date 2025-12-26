@@ -10,6 +10,7 @@
 
 Module.register("MMM-HolidayCountdown", {
     defaults: {
+        include_today: false,
         trips: [
             { destination: "Tunisia", date: "2024-02-15" },
             { destination: "Reighton Sands", date: "2023-11-01" },
