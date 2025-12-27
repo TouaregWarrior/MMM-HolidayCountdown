@@ -16,9 +16,10 @@ git clone https://github.com/TouaregWarrior/MMM-HolidayCountdown
 
 ## Configuration
 
-There is only 1 field - hopefully easy to understand!
+There is only 1 mandatory parameter - hopefully easy to understand!
 Just copy and paste additional entries to add trips!
 
+If you want to include the current date in the countdown (+1 day from the default behavior), you can include an optional parameter `include_today` and set it to `true`.
 
 Example config.js entry should look like
 
@@ -28,6 +29,7 @@ Example config.js entry should look like
     		position: "top_right",  // Or wherever you'd like it displayed
     		config: {
 				header: "Holiday Countdown",
+				include_today: true, // Optional - True will include current date in the countdown
         		trips: [
 				{ destination: "Amsterdam", date: "2024-10-02" },
 				{ destination: "Reighton Sands", date: "2024-11-01" },
