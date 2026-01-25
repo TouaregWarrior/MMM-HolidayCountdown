@@ -8,8 +8,8 @@ Example config.js should look like
 {
     module: "MMM-HolidayCountdown",
     position: "top_left",  // Or wherever you'd like it displayed
+    header: "Holiday Countdown",
     config: {
-        header: "Holiday Countdown",
         include_today: false, // true|false - False keeps the default behavior
         trips: [
             { destination: "Tunisia", date: "2023-08-15" },
