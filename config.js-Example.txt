@@ -5,6 +5,7 @@ Module will display the soonest 4 trips, trips in the past will not be displayed
 
 Example config.js should look like
 
+<<<<<<< HEAD
 
 	{
     		module: "MMM-HolidayCountdown",
@@ -19,3 +20,17 @@ Example config.js should look like
   			}
 	},
 
+=======
+{
+    module: "MMM-HolidayCountdown",
+    position: "top_left",  // Or wherever you'd like it displayed
+    header: "Holiday Countdown",
+    config: {
+        include_today: false, // true|false - False keeps the default behavior
+        trips: [
+            { destination: "Tunisia", date: "2023-08-15" },
+            { destination: "Reighton Sands", date: "2022-11-01" }
+        ]
+    }
+},
+>>>>>>> bc98fc2c437e3996cc4d1ac74a7f70b1ae49109d
