@@ -1,6 +1,6 @@
 //MMM-HolidayCountdown.js:
 
-/* Magic Mirror
+/* MagicMirror²
  * Module: MMM-HolidayCountdown
  *
  * By TouaregWarrior
